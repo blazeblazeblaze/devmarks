@@ -1,16 +1,13 @@
 import React from "react";
 
 import Hero from "./Hero";
-import TutorialList from "./TutorialList";
 
-const Topic = ({ name, subtitle, items, ...rest }) => (
+const Topic = ({ name, subtitle, children }) => (
   <section className="section">
     <div className="container">
       <Hero title={name} subtitle={subtitle} />
     </div>
-    <div className="container">
-      <TutorialList list={items} />
-    </div>
+    {children}
   </section>
 );
 
