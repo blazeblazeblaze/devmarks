@@ -1,7 +1,7 @@
 import React from "react";
 
 const TutorialItem = ({ href, name, description, free }) => (
-  <a href={href} target="_blank" className="box">
+  <div className="box is-marginless	is-radiusless">
     <article className="media">
       <figure className="media-left">
         <button className="button is-large">
@@ -13,7 +13,10 @@ const TutorialItem = ({ href, name, description, free }) => (
       <div className="media-content">
         <div className="content">
           <p>
-            <strong>{name}</strong> <br />
+            <a href={href} target="_blank">
+              <strong>{name}</strong>
+            </a>{" "}
+            <br />
             {description}
           </p>
         </div>
@@ -22,7 +25,7 @@ const TutorialItem = ({ href, name, description, free }) => (
         <span className="tag is-dark">{free ? "FREE" : "PAID"}</span>
       </div>
     </article>
-  </a>
+  </div>
 );
 
 export default TutorialItem;

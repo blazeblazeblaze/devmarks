@@ -21,7 +21,14 @@ const TopBar = () => (
       </div>
 
       <div className="navbar-menu">
-        <div className="navbar-start" />
+        <div className="navbar-start">
+          <Link className="navbar-item is-active" to="/">
+            <span className="icon">
+              <i className="fas fa-code" />
+            </span>
+            <span>Programming</span>
+          </Link>
+        </div>
 
         <div className="navbar-end">
           <div className="navbar-item">
