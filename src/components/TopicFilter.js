@@ -5,7 +5,7 @@ const TopicFilter = class extends Component {
     super(props);
 
     this.state = {
-      value: ""
+      value: props.topicsFilter.text || ""
     };
     this.onChange = this.onChange.bind(this);
   }
