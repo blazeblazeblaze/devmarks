@@ -1,8 +1,8 @@
-export const SEARCH_TOPIC = "SEARCH_TOPIC";
+import * as types from "../constants/ActionTypes";
 
 export const searchTopic = phrase => {
   return {
-    type: SEARCH_TOPIC,
+    type: types.SEARCH_TOPIC,
     phrase: phrase
   };
 };

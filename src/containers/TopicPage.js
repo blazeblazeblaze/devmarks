@@ -5,7 +5,7 @@ import { bySlug } from "../reducers";
 import Topic from "../components/Topic";
 import TutorialList from "../components/TutorialList";
 
-import { getTutorials } from "../actions/tutorial";
+import { getTutorials } from "../actions/tutorials";
 
 const TopicPage = class extends Component {
   componentDidMount() {

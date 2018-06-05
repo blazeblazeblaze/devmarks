@@ -5,8 +5,8 @@ class TopicItem extends Component {
   render() {
     const { name, slug, items, subtitle } = this.props;
     return (
-      <Link className="tile is-child box" to={`/topics/${slug}`}>
-        <article>
+      <Link className="tile is-parent" to={`/topics/${slug}`}>
+        <article className="tile is-child box">
           <p className="title">{name}</p>
           <p className="subtitle">{subtitle}</p>
           <span className="tag">{items.length} resource(s)</span>

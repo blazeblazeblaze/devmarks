@@ -1,13 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import TopicList from "../components/TopicList";
+import Home from "../components/Home";
+import { searchTopic } from "../actions/search";
+import { getTopics } from "../actions/topics";
 
-const HomePage = props => <TopicList {...props} />;
+const HomePage = class extends Component {
+  componentDidMount() {
+    this.props.requestTopics();
+  }
+  render() {
+    return <Home {...this.props} />;
+  }
+};
 
 export default connect(
   state => ({
     topics: state.topics
   }),
-  dispatch => ({})
+  {
+    onSearch: searchTopic,
+    requestTopics: getTopics
+  }
 )(HomePage);

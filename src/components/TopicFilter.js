@@ -16,16 +16,13 @@ const TopicFilter = class extends Component {
       ...this.state,
       value: value
     });
-    this.props.searchTopic(value);
+    this.props.onSearch(value);
   }
 
   render() {
     return (
       <section className="section">
         <div className="container">
-          <h3 className="title has-text-black-ter has-text-centered">
-            Browse Courses & Tutorials
-          </h3>
           <div className="field">
             <div className="control">
               <input

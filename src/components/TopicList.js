@@ -1,28 +1,28 @@
 import React from "react";
-import TopicItem from "./TopicItem";
-import SearchForm from "../containers/SearchForm";
 import chunk from "lodash/chunk";
-const TopicList = ({ topics }) => (
-  <div>
-    <SearchForm />
-    <section className="section">
-      <div className="container">
-        {chunk(topics, 3).map((group, index) => {
-          return (
-            <div key={index} className="tile is-ancestor">
-              {group.map(({ uuid, ...properties }) => {
-                return (
-                  <div key={uuid} className="tile is-parent">
-                    <TopicItem {...properties} />
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
-    </section>
+import TopicItem from "./TopicItem";
+
+const renderNoMatches = () => (
+  <div className="notification">
+    No topics found. Try with different search criteria.
   </div>
+);
+
+const TopicList = ({ topics }) => (
+  <section className="section">
+    <div className="container">
+      {topics.length === 0 ? renderNoMatches() : ""}
+      {chunk(topics, 3).map((group, index) => {
+        return (
+          <div key={index} className="tile is-ancestor">
+            {group.map(({ uuid, ...properties }) => (
+              <TopicItem key={uuid} {...properties} />
+            ))}
+          </div>
+        );
+      })}
+    </div>
+  </section>
 );
 
 export default TopicList;
