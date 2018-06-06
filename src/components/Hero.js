@@ -1,13 +1,24 @@
 import React from "react";
-const Hero = ({ title, subtitle }) => (
-  <section className="hero">
-    <div className="hero-body">
-      <div className="container">
-        <h1 className="title">{title}</h1>
-        <h2 className="subtitle">{subtitle}</h2>
+
+const getSubtitle = ({ title, subtitle }) => {
+  if (subtitle !== undefined || title !== undefined) {
+    return subtitle || `All about ${title}`;
+  }
+};
+
+const Hero = props => {
+  const { title } = props;
+
+  return (
+    <section className="hero">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">{title}</h1>
+          <h2>{getSubtitle(props)}</h2>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Hero;
