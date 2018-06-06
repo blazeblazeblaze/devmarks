@@ -2,33 +2,33 @@ import uuidv1 from "uuid/v1";
 
 export default [
   {
-    name: "PHP",
+    title: "PHP",
     uuid: uuidv1(),
     slug: "php",
     items: [
       {
-        name: "OOP",
+        title: "OOP",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Abc sdfsd  ",
+        title: "Abc sdfsd  ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsdjfhsdjf jsfd ",
+        title: "Jsdjfhsdjf jsfd ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsjdhfhjsdf sdfjsjdjj",
+        title: "Jsjdhfhjsdf sdfjsjdjj",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
@@ -37,34 +37,34 @@ export default [
     ]
   },
   {
-    name: "Java",
+    title: "Java",
     subtitle: "2.3.1",
     uuid: uuidv1(),
     slug: "java",
     items: [
       {
-        name: "OOP",
+        title: "OOP",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Abc sdfsd  ",
+        title: "Abc sdfsd  ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsdjfhsdjf jsfd ",
+        title: "Jsdjfhsdjf jsfd ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsjdhfhjsdf sdfjsjdjj",
+        title: "Jsjdhfhjsdf sdfjsjdjj",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
@@ -73,34 +73,34 @@ export default [
     ]
   },
   {
-    name: "Elixir",
+    title: "Elixir",
     subtitle: "2.3.1",
     uuid: uuidv1(),
     slug: "elixir",
     items: [
       {
-        name: "OOP",
+        title: "OOP",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Abc sdfsd  ",
+        title: "Abc sdfsd  ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsdjfhsdjf jsfd ",
+        title: "Jsdjfhsdjf jsfd ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsjdhfhjsdf sdfjsjdjj",
+        title: "Jsjdhfhjsdf sdfjsjdjj",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
@@ -109,34 +109,34 @@ export default [
     ]
   },
   {
-    name: "Ruby",
+    title: "Ruby",
     subtitle: "2.3.1",
     uuid: uuidv1(),
     slug: "ruby",
     items: [
       {
-        name: "OOP",
+        title: "OOP",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Abc sdfsd  ",
+        title: "Abc sdfsd  ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsdjfhsdjf jsfd ",
+        title: "Jsdjfhsdjf jsfd ",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
         paid: false
       },
       {
-        name: "Jsjdhfhjsdf sdfjsjdjj",
+        title: "Jsjdhfhjsdf sdfjsjdjj",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
@@ -145,12 +145,12 @@ export default [
     ]
   },
   {
-    name: "Clojure",
+    title: "Clojure",
     uuid: uuidv1(),
     slug: "clojure",
     items: [
       {
-        name: "OOP",
+        title: "OOP",
         description: "Foo Bar Baz Foo",
         href: "http://amazon.com",
         free: true,
@@ -159,19 +159,19 @@ export default [
     ]
   },
   {
-    name: "JavaScript",
+    title: "JavaScript",
     uuid: uuidv1(),
     slug: "javascript",
     items: [
       {
-        name: "ES6",
+        title: "ES6",
         description: "Foo Bar Baz Foo",
         href: "http://google.com",
         free: false,
         paid: true
       },
       {
-        name: "React",
+        title: "React",
         description: "Foo Bar Baz Foo",
         href: "http://facebook.com",
         free: true,
