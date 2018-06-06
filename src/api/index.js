@@ -1,7 +1,8 @@
 import { getTutorials } from "./tutorials";
-import { getTopics } from "./topics";
+import { getTopics, getTopic } from "./topics";
 
 export default {
   getTutorials,
-  getTopics
+  getTopics,
+  getTopic
 };
