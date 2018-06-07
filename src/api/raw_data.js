@@ -3,6 +3,7 @@ import uuidv1 from "uuid/v1";
 export default [
   {
     title: "PHP",
+    category: "OOP",
     uuid: uuidv1(),
     slug: "php",
     items: [
@@ -37,10 +38,47 @@ export default [
     ]
   },
   {
-    title: "Java",
-    subtitle: "2.3.1",
+    title: "Docker",
+    category: "Ops",
     uuid: uuidv1(),
-    slug: "java",
+    slug: "docker",
+    items: [
+      {
+        title: "OOP",
+        description: "Foo Bar Baz Foo",
+        href: "http://amazon.com",
+        free: true,
+        paid: false
+      },
+      {
+        title: "Abc sdfsd  ",
+        description: "Foo Bar Baz Foo",
+        href: "http://amazon.com",
+        free: true,
+        paid: false
+      },
+      {
+        title: "Jsdjfhsdjf jsfd ",
+        description: "Foo Bar Baz Foo",
+        href: "http://amazon.com",
+        free: true,
+        paid: false
+      },
+      {
+        title: "Jsjdhfhjsdf sdfjsjdjj",
+        description: "Foo Bar Baz Foo",
+        href: "http://amazon.com",
+        free: true,
+        paid: false
+      }
+    ]
+  },
+  {
+    title: "HTML",
+    category: "Frontend",
+    subtitle: "5",
+    uuid: uuidv1(),
+    slug: "html",
     items: [
       {
         title: "OOP",
@@ -75,6 +113,7 @@ export default [
   {
     title: "Elixir",
     subtitle: "2.3.1",
+    category: "Functional Programming",
     uuid: uuidv1(),
     slug: "elixir",
     items: [
@@ -112,6 +151,7 @@ export default [
     title: "Ruby",
     subtitle: "2.3.1",
     uuid: uuidv1(),
+    category: "OOP",
     slug: "ruby",
     items: [
       {
@@ -146,6 +186,7 @@ export default [
   },
   {
     title: "Clojure",
+    category: "Functional Programming",
     uuid: uuidv1(),
     slug: "clojure",
     items: [
@@ -160,6 +201,7 @@ export default [
   },
   {
     title: "JavaScript",
+    category: "Frontend",
     uuid: uuidv1(),
     slug: "javascript",
     items: [
