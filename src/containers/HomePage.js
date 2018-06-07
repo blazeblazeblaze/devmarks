@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import Home from "../components/Home";
-import { searchTopic } from "../actions/search";
+import { filterTopics } from "../actions/filters";
 import { getTopics } from "../actions/topics";
 
 import { visibleTopics } from "../reducers";
