@@ -1,224 +1,100 @@
-import uuidv1 from "uuid/v1";
+export const tutorials = {
+  php: [
+    {
+      title: "Hello PHP",
+      description: "Basic introduction to PHP",
+      href: "http://php.com",
+      free: true
+    }
+  ],
+  ruby: [
+    {
+      title: "Hello Ruby",
+      description: "Basic introduction to Ruby",
+      href: "http://ruby.com",
+      free: false
+    }
+  ],
+  html: [],
+  javascript: [],
+  docker: [],
+  kubernetes: []
+};
 
-export default [
+export const topicDetails = {
+  php: {
+    title: "PHP",
+    category: "OOP",
+    slug: "php",
+    tutorialsCount: tutorials.php.length
+  },
+  ruby: {
+    title: "Ruby",
+    category: "OOP",
+    slug: "ruby",
+    tutorialsCount: tutorials.ruby.length
+  },
+  javascript: {
+    title: "JavaScript",
+    category: "Frontend",
+    slug: "javascript",
+    tutorialsCount: tutorials.javascript.length
+  },
+  html: {
+    title: "HTML",
+    category: "Frontend",
+    slug: "html",
+    tutorialsCount: tutorials.html.length
+  },
+  docker: {
+    title: "Docker",
+    category: "DevOps",
+    slug: "docker",
+    tutorialsCount: tutorials.docker.length
+  },
+  kubernetes: {
+    title: "Kubernetes",
+    category: "DevOps",
+    slug: "kubernetes",
+    tutorialsCount: tutorials.kubernetes.length
+  }
+};
+
+export const topics = [
   {
     title: "PHP",
     category: "OOP",
-    uuid: uuidv1(),
     slug: "php",
-    items: [
-      {
-        title: "OOP",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Abc sdfsd  ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsdjfhsdjf jsfd ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsjdhfhjsdf sdfjsjdjj",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      }
-    ]
-  },
-  {
-    title: "Docker",
-    category: "Ops",
-    uuid: uuidv1(),
-    slug: "docker",
-    items: [
-      {
-        title: "OOP",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Abc sdfsd  ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsdjfhsdjf jsfd ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsjdhfhjsdf sdfjsjdjj",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      }
-    ]
-  },
-  {
-    title: "HTML",
-    category: "Frontend",
-    subtitle: "5",
-    uuid: uuidv1(),
-    slug: "html",
-    items: [
-      {
-        title: "OOP",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Abc sdfsd  ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsdjfhsdjf jsfd ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsjdhfhjsdf sdfjsjdjj",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      }
-    ]
-  },
-  {
-    title: "Elixir",
-    subtitle: "2.3.1",
-    category: "Functional Programming",
-    uuid: uuidv1(),
-    slug: "elixir",
-    items: [
-      {
-        title: "OOP",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Abc sdfsd  ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsdjfhsdjf jsfd ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsjdhfhjsdf sdfjsjdjj",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      }
-    ]
+    tutorialsCount: tutorials.php.length
   },
   {
     title: "Ruby",
-    subtitle: "2.3.1",
-    uuid: uuidv1(),
     category: "OOP",
     slug: "ruby",
-    items: [
-      {
-        title: "OOP",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Abc sdfsd  ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsdjfhsdjf jsfd ",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      },
-      {
-        title: "Jsjdhfhjsdf sdfjsjdjj",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      }
-    ]
-  },
-  {
-    title: "Clojure",
-    category: "Functional Programming",
-    uuid: uuidv1(),
-    slug: "clojure",
-    items: [
-      {
-        title: "OOP",
-        description: "Foo Bar Baz Foo",
-        href: "http://amazon.com",
-        free: true,
-        paid: false
-      }
-    ]
+    tutorialsCount: tutorials.ruby.length
   },
   {
     title: "JavaScript",
     category: "Frontend",
-    uuid: uuidv1(),
     slug: "javascript",
-    items: [
-      {
-        title: "ES6",
-        description: "Foo Bar Baz Foo",
-        href: "http://google.com",
-        free: false,
-        paid: true
-      },
-      {
-        title: "React",
-        description: "Foo Bar Baz Foo",
-        href: "http://facebook.com",
-        free: true,
-        paid: false
-      }
-    ]
+    tutorialsCount: tutorials.javascript.length
+  },
+  {
+    title: "HTML",
+    category: "Frontend",
+    slug: "html",
+    tutorialsCount: tutorials.html.length
+  },
+  {
+    title: "Docker",
+    category: "DevOps",
+    slug: "docker",
+    tutorialsCount: tutorials.docker.length
+  },
+  {
+    title: "Kubernetes",
+    category: "DevOps",
+    slug: "kubernetes",
+    tutorialsCount: tutorials.kubernetes.length
   }
 ];
