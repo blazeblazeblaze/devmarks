@@ -4,14 +4,16 @@ const Footer = () => (
   <footer className="footer">
     <div className="container">
       <div className="content has-text-centered">
-        <p>
+        <a
+          target="_blank"
+          href="https://github.com/blazejhadzik/devmarks"
+          className="button is-outlined"
+        >
           <span className="icon has-text-danger">
             <i className="fas fa-heart" />
           </span>
-          <strong>
-            <a href="https://github.com/blazejhadzik/devmarks">devmarks</a>
-          </strong>
-        </p>
+          <span>devmarks</span>
+        </a>
       </div>
     </div>
   </footer>

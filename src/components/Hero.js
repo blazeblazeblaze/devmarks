@@ -1,24 +1,22 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const getSubtitle = ({ title, subtitle }) => {
-  if (subtitle !== undefined || title !== undefined) {
-    return subtitle || `All about ${title}`;
-  }
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string
 };
 
-const Hero = props => {
-  const { title } = props;
-
-  return (
-    <section className="hero">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">{title}</h1>
-          <h2>{getSubtitle(props)}</h2>
-        </div>
+const Hero = ({ title, subtitle }) => (
+  <section className="hero">
+    <div className="hero-body">
+      <div className="container">
+        <h1 className="title">{title}</h1>
+        {subtitle && <h2>{subtitle}</h2>}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
+
+Hero.propTypes = propTypes;
 
 export default Hero;
