@@ -43,7 +43,6 @@ const TopBar = () => (
                   <span className="icon">
                     <i className="fab fa-github" />
                   </span>
-                  <span>Make it your own</span>
                 </a>
               </p>
             </div>
