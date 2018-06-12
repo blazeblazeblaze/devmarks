@@ -1,17 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 import TopBar from "./TopBar";
 import Footer from "./Footer";
 
-const Page = class extends Component {
-  render() {
-    return (
-      <div>
-        <TopBar />
-        {this.props.children}
-        <Footer />
-      </div>
-    );
-  }
+import PropTypes from "prop-types";
+
+const propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string
+  ]).isRequired
 };
+
+const style = {
+  backgroundColor: "#fafafa"
+};
+
+const Page = ({ children }) => (
+  <div style={style}>
+    <TopBar />
+    {children}
+    <Footer />
+  </div>
+);
+
+Page.propTypes = propTypes;
 
 export default Page;
