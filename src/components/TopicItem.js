@@ -1,19 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-class TopicItem extends Component {
-  render() {
-    const { title, slug, items, subtitle } = this.props;
-    return (
-      <Link className="tile is-parent" to={`/topics/${slug}`}>
-        <article className="tile is-child box">
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  tutorialsCount: PropTypes.number.isRequired
+};
+
+const TopicItem = ({ title, slug, tutorialsCount }) => (
+  <Link className="tile is-4 is-parent" to={`/topics/${slug}`}>
+    <article className="tile is-child box">
+      <div className="columns">
+        <div className="column">
           <p className="title">{title}</p>
-          <p className="subtitle">{subtitle}</p>
-          <span className="tag">{items.length} resource(s)</span>
-        </article>
-      </Link>
-    );
-  }
-}
+        </div>
+        <div className="column">
+          <span className="button is-medium is-pulled-right">
+            <span className="icon">{tutorialsCount}</span>
+          </span>
+        </div>
+      </div>
+    </article>
+  </Link>
+);
+
+TopicItem.propTypes = propTypes;
 
 export default TopicItem;
