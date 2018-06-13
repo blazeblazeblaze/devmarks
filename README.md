@@ -1,6 +1,6 @@
 # Devmarks Prototype
 
-![Devmarks Screenshot](https://bitbucket.org/blazejhadzik/devmarks/raw/master/devmarks_screenshot.png)
+![Devmarks Screenshot](devmarks_screenshot.png)
 
 This is a bookmark organising app written in React/Redux.
 It comes with a dummy API with 3 endpoints:
