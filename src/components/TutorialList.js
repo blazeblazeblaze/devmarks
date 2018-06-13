@@ -1,15 +1,32 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import TutorialItem from "./TutorialItem";
 
-const TutorialList = ({ list }) => (
+const propTypes = {
+  tutorials: PropTypes.array.isRequired
+};
+
+const defaultProps = {
+  tutorials: []
+};
+
+const NoTutorialsAvailable = () => (
+  <div className="notification">No tutorials available.</div>
+);
+
+const TutorialList = ({ tutorials }) => (
   <section className="section">
     <div className="container">
-      {list.map((tutorial, index) => (
+      {tutorials.length === 0 ? <NoTutorialsAvailable /> : ""}
+      {tutorials.map((tutorial, index) => (
         <TutorialItem key={index} {...tutorial} />
       ))}
     </div>
   </section>
 );
+
+TutorialList.propTypes = propTypes;
+TutorialList.defaultProps = defaultProps;
 
 export default TutorialList;

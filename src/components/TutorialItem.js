@@ -1,6 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const TutorialItem = ({ href, name, description, free }) => (
+const propTypes = {
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  free: PropTypes.bool.isRequired
+};
+
+const TutorialItem = ({ href, title, description, free }) => (
   <div className="box is-marginless	is-radiusless">
     <article className="media">
       <figure className="media-left">
@@ -13,8 +21,8 @@ const TutorialItem = ({ href, name, description, free }) => (
       <div className="media-content">
         <div className="content">
           <p>
-            <a href={href} target="_blank">
-              <strong>{name}</strong>
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <strong>{title}</strong>
             </a>{" "}
             <br />
             {description}
@@ -27,5 +35,7 @@ const TutorialItem = ({ href, name, description, free }) => (
     </article>
   </div>
 );
+
+TutorialItem.propTypes = propTypes;
 
 export default TutorialItem;
