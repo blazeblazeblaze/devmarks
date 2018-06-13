@@ -1,35 +1,37 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { bySlug } from "../reducers";
-
+import {
+  fetchTopicDetailsIfNeeded,
+  invalidateTopicDetails
+} from "../actions/topic";
 import Topic from "../components/Topic";
-import TutorialList from "../components/TutorialList";
-
-import { getTutorials } from "../actions/tutorials";
 
 const TopicPage = class extends Component {
   componentDidMount() {
-    const { topic: { slug } } = this.props;
-    this.props.requestTutorials(slug);
+    const { slug } = this.props;
+    this.props.fetchTopicDetailsIfNeeded(slug);
   }
   render() {
-    const { topic, tutorials } = this.props;
-    return (
-      <Topic {...topic}>
-        <div className="container">
-          <TutorialList list={tutorials} />
-        </div>
-      </Topic>
-    );
+    return <Topic {...this.props} />;
   }
 };
 
-export default connect(
-  (state, { match: { params: { slug } } }) => ({
-    topic: bySlug(state, slug),
-    tutorials: state.tutorials
-  }),
-  {
-    requestTutorials: getTutorials
-  }
-)(TopicPage);
+const mapStateToProps = ({ topics }, ownProps) => {
+  const currentSlug = ownProps.match.params.slug;
+
+  const { payload, isLoading } = topics.topicDetails[currentSlug] || {
+    isLoading: true,
+    payload: {}
+  };
+
+  return {
+    topic: payload,
+    isLoading: isLoading,
+    slug: currentSlug
+  };
+};
+
+export default connect(mapStateToProps, {
+  fetchTopicDetailsIfNeeded,
+  invalidateTopicDetails
+})(TopicPage);
