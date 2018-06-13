@@ -6,6 +6,7 @@ const Footer = () => (
       <div className="content has-text-centered">
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://github.com/blazejhadzik/devmarks"
           className="button is-outlined"
         >
