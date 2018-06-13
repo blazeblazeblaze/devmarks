@@ -1,4 +1,19 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+const propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  categories: PropTypes.array,
+  disabled: PropTypes.bool
+};
+
+const defaultProps = {
+  placeholder: "Select item",
+  categories: [],
+  disabled: false
+};
 
 const renderOptions = categories =>
   categories.map((category, index) => (
@@ -7,12 +22,14 @@ const renderOptions = categories =>
     </option>
   ));
 
-const TopicCategoryField = ({ value, placeholder, onChange, categories }) => {
+const TopicCategoryField = props => {
+  const { value, placeholder, onChange, categories, disabled } = props;
+
   return (
-    <div className="field">
+    <div className="field is-pulled-right">
       <div className="control has-icons-left">
         <div className="select is-large">
-          <select value={value} onChange={onChange}>
+          <select disabled={disabled} value={value} onChange={onChange}>
             <option value="">{placeholder}</option>
             {renderOptions(categories)}
           </select>
@@ -24,5 +41,8 @@ const TopicCategoryField = ({ value, placeholder, onChange, categories }) => {
     </div>
   );
 };
+
+TopicCategoryField.propTypes = propTypes;
+TopicCategoryField.defaultProps = defaultProps;
 
 export default TopicCategoryField;

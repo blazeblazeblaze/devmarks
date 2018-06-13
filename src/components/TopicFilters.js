@@ -1,16 +1,28 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 import TopicNameField from "./TopicNameField";
 import TopicCategoryField from "./TopicCategoryField";
+
+const propTypes = {
+  onSearch: PropTypes.func.isRequired,
+  topicsFilter: PropTypes.object.isRequired,
+  isLoading: PropTypes.bool,
+  categories: PropTypes.array
+};
+
+const defaultProps = {
+  isLoading: false,
+  categories: []
+};
 
 const TopicFilters = class extends Component {
   constructor(props) {
     super(props);
 
-    this.onValueChange = this.onValueChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  onValueChange(key, value) {
+  handleChange(key, value) {
     this.props.onSearch({
       [key]: {
         value
@@ -19,23 +31,26 @@ const TopicFilters = class extends Component {
   }
 
   render() {
+    const { topicsFilter, categories, isLoading } = this.props;
+
     return (
       <section className="section">
         <div className="container">
           <div className="columns">
             <div className="column">
               <TopicNameField
-                value={this.props.topicsFilter.name.value}
-                onChange={e => this.onValueChange("name", e.target.value)}
-                placeholder="Search for Ruby, JavaScript, ..."
+                value={topicsFilter.name.value}
+                onChange={e => this.handleChange("name", e.target.value)}
+                placeholder="Search for Ruby, Docker..."
               />
             </div>
-            <div className="column is-one-quarter">
+            <div className="column is-one-third">
               <TopicCategoryField
-                categories={this.props.categories}
-                value={this.props.topicsFilter.category.value}
-                onChange={e => this.onValueChange("category", e.target.value)}
-                placeholder="Select Category"
+                disabled={isLoading}
+                value={topicsFilter.category.value}
+                onChange={e => this.handleChange("category", e.target.value)}
+                categories={categories}
+                placeholder="Select category"
               />
             </div>
           </div>
@@ -44,5 +59,8 @@ const TopicFilters = class extends Component {
     );
   }
 };
+
+TopicFilters.propTypes = propTypes;
+TopicFilters.defaultProps = defaultProps;
 
 export default TopicFilters;
