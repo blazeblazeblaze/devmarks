@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Topic /> matches snapshot 1`] = `
+<div>
+  <Hero
+    title="Browse tutorials"
+  />
+  <Connect(TopicTutorials)
+    slug="some slug"
+  />
+  <Connect(RecommendedTopicsPage)
+    topic={Object {}}
+  />
+</div>
+`;

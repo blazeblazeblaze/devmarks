@@ -7,12 +7,12 @@ const fetchTopics = slug => dispatch => {
     slug
   });
 
-  api
+  return api
     .getTutorials(slug)
-    .then(data => {
+    .then(tutorials => {
       dispatch({
         type: types.FETCH_TUTORIALS_SUCCESS,
-        tutorials: data,
+        tutorials,
         slug
       });
     })
@@ -29,15 +29,17 @@ const shouldFetchTutorials = (state, slug) => {
 
   if (!tutorials) {
     return true;
-  } else if (tutorials.isFetching) {
+  } else if (tutorials.isLoading) {
     return false;
   } else {
     return tutorials.didInvalidate;
   }
 };
 
-export const invalidateTutorials = slug => dispatch =>
-  dispatch({ type: types.INVALIDATE_TUTORIALS, slug });
+export const invalidateTutorials = slug => ({
+  type: types.INVALIDATE_TUTORIALS,
+  slug
+});
 
 export const fetchTutorialsIfNeeded = slug => (dispatch, getState) => {
   if (shouldFetchTutorials(getState(), slug)) {

@@ -6,7 +6,7 @@ import TopicTutorials from "../containers/TopicTutorials";
 import RecommendedTopics from "../containers/RecommendedTopics";
 
 const propTypes = {
-  topic: PropTypes.object.isRequired,
+  topic: PropTypes.object,
   slug: PropTypes.string.isRequired
 };
 

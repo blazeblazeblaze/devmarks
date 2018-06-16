@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopBar /> matches snapshot 1`] = `
+<nav
+  className="navbar has-shadow is-spaced"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <Link
+        className="navbar-item"
+        replace={false}
+        to="/"
+      >
+        <div
+          className="icon has-text-danger"
+        >
+          <i
+            className="far fa-bookmark fa-lg"
+          />
+        </div>
+      </Link>
+      <div
+        className="navbar-burger burger"
+        data-target="navbarExampleTransparentExample"
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+    <div
+      className="navbar-menu"
+    >
+      <div
+        className="navbar-start"
+      >
+        <Link
+          className="navbar-item is-active"
+          replace={false}
+          to="/"
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fas fa-code"
+            />
+          </span>
+          <span>
+            Programming
+          </span>
+        </Link>
+      </div>
+      <div
+        className="navbar-end"
+      >
+        <div
+          className="navbar-item"
+        >
+          <div
+            className="field is-grouped"
+          >
+            <p
+              className="control"
+            >
+              <a
+                className="bd-tw-button is-medium button"
+                href="http://github.com/blazejhadzik/devmarks"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span
+                  className="icon"
+                >
+                  <i
+                    className="fab fa-github"
+                  />
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

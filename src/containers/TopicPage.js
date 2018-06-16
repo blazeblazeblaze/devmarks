@@ -18,15 +18,10 @@ const TopicPage = class extends Component {
 
 const mapStateToProps = ({ topics }, ownProps) => {
   const currentSlug = ownProps.match.params.slug;
-
-  const { payload, isLoading } = topics.topicDetails[currentSlug] || {
-    isLoading: true,
-    payload: {}
-  };
+  const topic = topics.topicDetails[currentSlug];
 
   return {
-    topic: payload,
-    isLoading: isLoading,
+    topic: topic && topic.payload,
     slug: currentSlug
   };
 };

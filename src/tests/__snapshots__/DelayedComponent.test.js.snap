@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DelayedComponent /> when isReady is false renders placeholder component 1`] = `
+<div>
+  <Placeholder />
+</div>
+`;
+
+exports[`<DelayedComponent /> when isReady is true renders its children 1`] = `
+<div>
+  <MainComponent />
+</div>
+`;

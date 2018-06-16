@@ -7,12 +7,12 @@ const fetchTopicDetails = slug => dispatch => {
     slug
   });
 
-  api
+  return api
     .getTopicDetails(slug)
-    .then(data => {
+    .then(topic => {
       dispatch({
         type: types.FETCH_TOPIC_DETAILS_SUCCESS,
-        topic: data,
+        topic,
         slug
       });
     })
@@ -24,15 +24,17 @@ const shouldFetchTopicDetails = (state, slug) => {
 
   if (!topic) {
     return true;
-  } else if (topic.isFetching) {
+  } else if (topic.isLoading) {
     return false;
   } else {
     return topic.didInvalidate;
   }
 };
 
-export const invalidateTopicDetails = slug => dispatch =>
-  dispatch({ type: types.INVALIDATE_TOPIC_DETAILS, slug });
+export const invalidateTopicDetails = slug => ({
+  type: types.INVALIDATE_TOPIC_DETAILS,
+  slug
+});
 
 export const fetchTopicDetailsIfNeeded = slug => (dispatch, getState) => {
   if (shouldFetchTopicDetails(getState(), slug)) {

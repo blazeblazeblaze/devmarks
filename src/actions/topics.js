@@ -6,7 +6,7 @@ const shouldFetchTopics = ({ topics }) => {
 
   if (!topicItems || topicItems.length === 0) {
     return true;
-  } else if (topics.status.isFetching) {
+  } else if (topics.status.isLoading) {
     return false;
   } else {
     return topics.status.didInvalidate;
@@ -20,10 +20,10 @@ const fetchTopics = () => dispatch => {
 
   api
     .getTopics()
-    .then(data => {
+    .then(topics => {
       dispatch({
         type: types.FETCH_TOPICS_SUCCESS,
-        topics: data
+        topics
       });
     })
     .catch(() => dispatch({ type: types.FETCH_TOPICS_ERROR }));
