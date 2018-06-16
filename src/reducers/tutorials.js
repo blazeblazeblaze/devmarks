@@ -30,8 +30,9 @@ const tutorial = (state = {}, action) => {
       return {
         ...state,
         hasErrors: false,
-        isFetching: false,
-        didInvalidate: true
+        isLoading: false,
+        didInvalidate: true,
+        entities: []
       };
     default:
       return {

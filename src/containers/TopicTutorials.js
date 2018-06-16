@@ -32,10 +32,7 @@ const TopicTutorials = class extends Component {
   }
 
   componentDidUpdate(nextProps) {
-    // if (nextProps.slug !== this.props.slug) {
-    console.log("did update");
     this.props.fetchTutorialsIfNeeded(this.props.slug);
-    // }
   }
 
   render() {

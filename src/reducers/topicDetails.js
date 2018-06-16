@@ -29,6 +29,8 @@ const topic = (state = {}, action) => {
     case types.INVALIDATE_TOPIC_DETAILS:
       return {
         ...state,
+        payload: {},
+        isLoading: false,
         hasErrors: false,
         didInvalidate: true
       };
