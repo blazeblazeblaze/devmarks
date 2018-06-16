@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import TutorialItem from "./TutorialItem";
 
 const propTypes = {
-  tutorials: PropTypes.array.isRequired
+  tutorials: PropTypes.array
 };
 
 const defaultProps = {
