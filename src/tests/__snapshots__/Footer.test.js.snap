@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> matches snapshot 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="content has-text-centered"
+    >
+      <a
+        className="button is-outlined"
+        href="https://github.com/blazejhadzik/devmarks"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="icon has-text-danger"
+        >
+          <i
+            className="fas fa-heart"
+          />
+        </span>
+        <span>
+          devmarks
+        </span>
+      </a>
+    </div>
+  </div>
+</footer>
+`;

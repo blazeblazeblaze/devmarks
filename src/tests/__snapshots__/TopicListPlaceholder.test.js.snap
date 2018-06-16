@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopicListPlaceholder /> matches snapshot 1`] = `
+<section
+  className="section"
+>
+  <div
+    className="container"
+  >
+    <ContentLoader
+      primaryColor="#f3f3f3"
+      secondaryColor="#ecebeb"
+      speed={2}
+    >
+      <rect
+        height="30"
+        rx="0"
+        ry="0"
+        width="125"
+        x="0"
+        y="0"
+      />
+      <rect
+        height="30"
+        rx="0"
+        ry="0"
+        width="125"
+        x="0"
+        y="45"
+      />
+      <rect
+        height="30"
+        rx="0"
+        ry="0"
+        width="125"
+        x="140"
+        y="0"
+      />
+      <rect
+        height="30"
+        rx="0"
+        ry="0"
+        width="125"
+        x="280"
+        y="0"
+      />
+      <rect
+        height="30"
+        rx="0"
+        ry="0"
+        width="125"
+        x="140"
+        y="45"
+      />
+      <rect
+        height="30"
+        rx="0"
+        ry="0"
+        width="125"
+        x="280"
+        y="45"
+      />
+    </ContentLoader>
+  </div>
+</section>
+`;

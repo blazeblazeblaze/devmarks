@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> matches snapshot 1`] = `
+<div>
+  <Hero
+    subtitle="Type any phrase below"
+    title="Browse Courses & Tutorials"
+  />
+  <Connect(TopicFilters) />
+  <Connect(FilteredTopics) />
+</div>
+`;

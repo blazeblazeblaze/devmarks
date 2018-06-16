@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorMessage /> when onClick handled is not provided matches snapshot 1`] = `
+<section
+  className="section"
+>
+  <div
+    className="container"
+  >
+    <article
+      className="message is-large is-danger"
+    >
+      <div
+        className="message-body"
+      >
+        Oops! An unexpected error occured.
+        <p />
+      </div>
+    </article>
+  </div>
+</section>
+`;
+
+exports[`<ErrorMessage /> when onClick handled is provided matches snapshot 1`] = `
+<section
+  className="section"
+>
+  <div
+    className="container"
+  >
+    <article
+      className="message is-large is-danger"
+    >
+      <div
+        className="message-body"
+      >
+        Oops! An unexpected error occured.
+        <p>
+          <a
+            className="button is-rounded"
+            href=""
+            onClick={[Function]}
+          >
+            <strong>
+              Try again
+            </strong>
+          </a>
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+`;
